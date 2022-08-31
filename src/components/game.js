@@ -31,7 +31,7 @@ const Game = () => {
   };
 
   const renderMoves = () => {
-    history.map((_step, move) => {
+    return history.map((_step, move) => {
       const destination = move ? `Go to move #${move}` : `Go to start`;
       return (
         <li key={move}>
@@ -50,7 +50,7 @@ const Game = () => {
           <h3>History</h3>
           {renderMoves()}
         </div>
-        <h3>{winner ? 'Winner' : 'Next Player' + xO}</h3>
+        <h3>{winner ? 'Winner: ' + winner : 'Next Player ' + xO}</h3>
       </div>
     </>
   );
